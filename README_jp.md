@@ -1,6 +1,6 @@
 # SmartHomeSimulatorについて
 
-SmartHomeSimulatorはHome IoT プログラミング研修のために作成されたソフトウエアです。IoT住宅をまねたIoT House Simulatorと、上記Simulatorを制御できるECHONET Lite Web APIで構成されます。IoT House Simulatorはブラウザ上で動作しECHONET Lite Web APIはNode.js上で動作します。ソフトウエアは全てJavaScriptで記述されています。
+SmartHomeSimulatorはIoT プログラミング研修のために作成されたソフトウエアです。IoT住宅をまねたIoT House Simulatorと、上記Simulatorを制御できるECHONET Lite Web APIで構成されます。IoT House Simulatorはブラウザ上で動作しECHONET Lite Web APIはNode.js上で動作します。ソフトウエアは全てJavaScriptで記述されています。SmartHouseSimulatorを動かすにはNode.jsが必要となります。
 
 # ソフトウエアのインストール方法
 
@@ -8,12 +8,20 @@ Node.jsが動くLinux環境またはWindows環境において、ソースファ�
 ```
 npm  install
 ```
-上記コマンドでインストールする場合、package.jsonを参照して必要なパッケージが自動的にインストールされます。もしバージョン不整合等によるエラーが発生した場合、必要なパッケージ類を個別にインストールすることも可能です。必須パッケージは下記の通りです。
+上記コマンドでインストールする場合、package.jsonを参照して必要なパッケージが自動的にインストールされます。もしバージョン不整合等によるエラーが発生した場合、必要なパッケージ類を手動でインストールすることもできます。必須パッケージは下記の通りです。
 - body-parser
-- ejs
+- socket.io
 - express
 - morgan
-- socket.io
+- ejs
+
+手動でインストールする場合、以下の様にパッケージ名を指定してnpmコマンドを実行してください。
+```
+npm install body-parser
+npm install express
+npm install socket.io
+npm install ejs
+```
 
 # ソフトウエアの起動方法
 
