@@ -6,7 +6,7 @@ SmartHomeSimulatorはHome IoT プログラミング研修のために作成さ�
 
 # ソフトウエアのインストール方法
 
-または、node.jsが動くLinux環境またはWindows環境において、ファイル一式を配置してください。app.jsやpackage.jsonが置かれているフォルダにおいて、以下のコマンド実行してください。必要なパッケージ類がインストールされます。
+Node.jsが動くLinux環境またはWindows環境において、ファイル一式を配置してください。app.jsやpackage.jsonが置かれているフォルダにおいて、以下のコマンド実行してください。必要なパッケージ類がインストールされます。
 ```
 npm  install
 ```
