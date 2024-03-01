@@ -1,8 +1,7 @@
 # SmartHomeSimulatorについて
 
 SmartHomeSimulatorはHome IoT プログラミング研修のために作成されたソフトウエアであり、ECHONET Lite Web APIとIoT House Simulatorで構成されます。
-ソフトウエアはJavaScriptで記述されており、ECHONET Lite Web APIはNode.js上で動作し、IoT House Simulatorはブラウザ上で動作します。
-上記２つのソフトウエアはWebSocketで通信しています。
+ソフトウエアは全てJavaScriptで記述されており、ECHONET Lite Web APIはNode.js上で動作し、IoT House Simulatorはブラウザ上で動作します。
 
 # ソフトウエアのインストール方法
 
@@ -10,7 +9,7 @@ Node.jsが動くLinux環境またはWindows環境において、ファイル一�
 ```
 npm  install
 ```
-もしバージョンが古い等の問題がありましたら、必要なパッケージ類を個別にインストールすることも可能です。必須パッケージは下記の通りです。
+上記コマンドでインストールする場合、package.jsonを参照して必要なパッケージが自動的にインストールされます。もしバージョン不整合等によるエラーが発生した場合、必要なパッケージ類を個別にインストールすることも可能です。必須パッケージは下記の通りです。
 - body-parser
 - ejs
 - express
@@ -30,7 +29,7 @@ this is IPv4 and IP is detected
 172.17.96.137
 listen on 172.17.96.137:8010
 ```
-上記の場合、ブラウザから`http://172.17.96.137:8010`でアクセスしてください。
+上記の場合、ブラウザから`http://172.17.96.137:8010`でアクセスしてください。本ソフトウエアの仕様や詳しい使い方はWikiに記載する予定です。
 
 # 現在分かっている不具合、未実装機能について
 
@@ -41,9 +40,8 @@ listen on 172.17.96.137:8010
 # フリー素材イラスト引用元
 IoT House Simulatorを構成する画像は以下のサイトから入手しました。
 1. リビングの画像
-https://www.irasutoya.com/2016/01/blog-post_133.html
-Copyright(c) いらすとや. All Rights Reserved.
+    - https://www.irasutoya.com/2016/01/blog-post_133.html
+    - Copyright(c) いらすとや. All Rights Reserved.
 2. 時計の画像
-https://frame-illust.com/?p=9756
-Copyright(c) 無料フリーイラスト素材集【Frame illust】
-2014 All Rights Reserved.
+    - https://frame-illust.com/?p=9756
+    - Copyright(c) 無料フリーイラスト素材集【Frame illust】
