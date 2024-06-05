@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>ECHONET Lite Web API Simulator(v1.0.7)</h1>
+  <h1>ECHONET Lite Web API Simulator(v1.0.8)</h1>
   <hr>
   <ul>
 
@@ -32,28 +32,28 @@
      <td>function</td><td>method</td><td>URL</td>
   </tr>
   <tr>
-     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe01234501300100010203040506070809">http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809</a></td>
+     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345013001012345000000000000ff">http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff</a></td>
   </tr>
   <tr>
-    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe01234501300100010203040506070809/properties">http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties</a>
+    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345013001012345000000000000ff/properties">http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties</a>
   </tr>
   <tr>
-    <td>get property (operationStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe01234501300100010203040506070809/properties/operationStatus">http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties/operationStatus</a></td>
+    <td>get property (operationStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345013001012345000000000000ff/properties/operationStatus">http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties/operationStatus</a></td>
   </tr>
   <tr>
-    <td>get property (roomTemperature) </td><td>GET</td><td><a href="/elapi/v1/devices/fe01234501300100010203040506070809/properties/roomTemperature">http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties/roomTemperature</a></td>
+    <td>get property (roomTemperature) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345013001012345000000000000ff/properties/roomTemperature">http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties/roomTemperature</a></td>
   </tr>
   <tr>
-    <td>get property (outdoorTemperature) </td><td>GET</td><td><a href="/elapi/v1/devices/fe01234501300100010203040506070809/properties/outdoorTemperature">http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties/outdoorTemperature</a></td>
+    <td>get property (outdoorTemperature) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345013001012345000000000000ff/properties/outdoorTemperature">http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties/outdoorTemperature</a></td>
   </tr>
   <tr>
-     <td>set property (operationStatus) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties/operationStatus </a>
+     <td>set property (operationStatus) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties/operationStatus </a>
 <pre>
 BODY: { "operationStatus" : true }
 BODY: { "operationStatus" : false }
 </pre>
 <pre>
-curl -X PUT -H "Content-Type: application/json"   -d '{"operationStatus" : false}'  http://<%= ip_address%>/elapi/v1/devices/fe01234501300100010203040506070809/properties/operationStatus
+curl -X PUT -H "Content-Type: application/json"   -d '{"operationStatus" : false}'  http://<%= ip_address%>/elapi/v1/devices/fe012345013001012345000000000000ff/properties/operationStatus
 </pre>
 
 
@@ -67,22 +67,22 @@ curl -X PUT -H "Content-Type: application/json"   -d '{"operationStatus" : false
      <td>function</td><td>method</td><td>URL</td>
   </tr>
   <tr>
-     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026F0100010203040506070809">http://<%= ip_address%>/elapi/v1/devices/fe012345026F0100010203040506070809</a></td>
+     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026f01012345000000000000ff">http://<%= ip_address%>/elapi/v1/devices/fe012345026f01012345000000000000ff</a></td>
   </tr>
   <tr>
-    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026F0100010203040506070809/properties">http://<%= ip_address%>/elapi/v1/devices/fe012345026F0100010203040506070809/properties</a>
+    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026f01012345000000000000ff/properties">http://<%= ip_address%>/elapi/v1/devices/fe012345026f01012345000000000000ff/properties</a>
   </tr>
   <tr>
-    <td>get property (lockStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345026F0100010203040506070809/properties/lockStatus">http://<%= ip_address%>/elapi/v1/devices/fe012345026F0100010203040506070809/properties/lockStatus</a></td>
+    <td>get property (lockStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345026f01012345000000000000ff/properties/lockStatus">http://<%= ip_address%>/elapi/v1/devices/fe012345026f01012345000000000000ff/properties/lockStatus</a></td>
   </tr>
   <tr>
-     <td>set property (lockStatus) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe012345026F0100010203040506070809/properties/lockStatus </a>
+     <td>set property (lockStatus) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe012345026f01012345000000000000ff/properties/lockStatus </a>
 <pre>
 BODY: { "lockStatus" : "lock" }
 </pre>
 
 <pre>
-curl -X PUT -H "Content-Type: application/json"   -d '{"lockStatus" : "lock"}'  http://<%= ip_address%>/elapi/v1/devices/fe012345026F0100010203040506070809/properties/lockStatus
+curl -X PUT -H "Content-Type: application/json"   -d '{"lockStatus" : "lock"}'  http://<%= ip_address%>/elapi/v1/devices/fe012345026f01012345000000000000ff/properties/lockStatus
 </pre>
 
   </dt>
@@ -95,16 +95,16 @@ curl -X PUT -H "Content-Type: application/json"   -d '{"lockStatus" : "lock"}'  
      <td>function</td><td>method</td><td>URL</td>
   </tr>
   <tr>
-     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe01234502630100010203040506070809">http://<%= ip_address%>/elapi/v1/devices/fe01234502630100010203040506070809</a></td>
+     <td>get device description</td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026301012345000000000000ff">http://<%= ip_address%>/elapi/v1/devices/fe012345026301012345000000000000ff</a></td>
   </tr>
   <tr>
-    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe01234502630100010203040506070809/properties">http://<%= ip_address%>/elapi/v1/devices/fe01234502630100010203040506070809/properties</a>
+    <td>get propertys  </td><td>GET</td><td> <a href="/elapi/v1/devices/fe012345026301012345000000000000ff/properties">http://<%= ip_address%>/elapi/v1/devices/fe012345026301012345000000000000ff/properties</a>
   </tr>
   <tr>
-    <td>get property (openClosedStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe01234502630100010203040506070809/properties/openClosedStatus">http://<%= ip_address%>/elapi/v1/devices/fe01234502630100010203040506070809/properties/openClosedStatus</a></td>
+    <td>get property (openClosedStatus) </td><td>GET</td><td><a href="/elapi/v1/devices/fe012345026301012345000000000000ff/properties/openClosedStatus">http://<%= ip_address%>/elapi/v1/devices/fe012345026301012345000000000000ff/properties/openClosedStatus</a></td>
   </tr>
   <tr>
-     <td>set property (openControl) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe01234502630100010203040506070809/properties/openControl</a>
+     <td>set property (openControl) </td><td>PUT</td><td>http://<%= ip_address%>/elapi/v1/devices/fe012345026301012345000000000000ff/properties/openControl</a>
 <pre>
 BODY: { "openControl" : "open" }
 BODY: { "openControl" : "close" }
@@ -113,7 +113,7 @@ BODY: { "openControl" : "halfopen" }
 </pre>
 
 <pre>
-curl -X PUT -H "Content-Type: application/json" -d '{"openControl" : "open"}' http://<%= ip_address%>/elapi/v1/devices/fe01234502630100010203040506070809/properties/openControl
+curl -X PUT -H "Content-Type: application/json" -d '{"openControl" : "open"}' http://<%= ip_address%>/elapi/v1/devices/fe012345026301012345000000000000ff/properties/openControl
 </pre>
 
   </dt>

@@ -11,6 +11,7 @@
 // 1.0.5   2024/1/25 modify get_property (change json format)
 // 1.0.6   2024/2/18 modify device id for common  e.g. 00000  or 012345
 // 1.0.7   2024/3/01 Changed device ID to general ID  (e.g. 012345)
+// 1.0.8   2024/6/05 Changed device ID to general ID  (e.g. 012345FF)
 //
 //------------------------------------------------------------------
 // https://socket.io/get-started/chat
@@ -149,7 +150,7 @@ app.get('/elapi/v1/devices', (req, res) => {
 //
 // Get Device Description
 // e.g.
-//   http://localhost:8085/elapi/v1/devices/fe00000b0000013001d8aff10000fcd241
+//   http://localhost:8085/elapi/v1/devices/<device_id>
 //
 
 app.get('/elapi/v1/devices/:device_id', (req, res) => {
@@ -179,7 +180,7 @@ app.get('/elapi/v1/devices/:device_id', (req, res) => {
 //
 // Get Properties of Device
 // e.g.
-//   http://localhost:8085/elapi/v1/devices/fe00000b0000013001d8aff10000fcd241/properties
+//   http://localhost:8085/elapi/v1/devices/<device_id>/properties
 //
 app.get('/elapi/v1/devices/:device_id/properties', (req, res) => {
 
@@ -207,7 +208,7 @@ app.get('/elapi/v1/devices/:device_id/properties', (req, res) => {
 
 // Get Property of Device
 // e.g
-//   http://localhost:8085/elapi/v1/devices/fe00000b0000013001d8aff10000fcd241/properties/operationStatus
+//   http://localhost:8085/elapi/v1/devices/<device_id>/properties/operationStatus
 //
 app.get('/elapi/v1/devices/:device_id/properties/:property_name', (req, res) => {
 

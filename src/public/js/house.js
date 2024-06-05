@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////
 //
 // 
-//    IoTHouseSimualtor(1.0.7)
+//    IoTHouseSimualtor(1.0.8)
 //
 //    HOUSE Class (Controller and View of MVC model)
 // 
@@ -21,9 +21,9 @@
 
 'use strict';
 
-const HomeAirConditionerID =  'fe01234501300100010203040506070809';
-const ElectricLockID =        'fe012345026F0100010203040506070809';
-const ElectricRainDoorID =    'fe01234502630100010203040506070809';
+const HomeAirConditionerID =  'fe012345013001012345000000000000ff';
+const ElectricLockID =        'fe012345026f01012345000000000000ff';
+const ElectricRainDoorID =    'fe012345026301012345000000000000ff';
 
 const LIVING_ROOM_IMG =  'js/img/living_room.png'; 
 const LIVING_ROOM_NIGHT_IMG = 'js/img/living_room_nighttime.png'; 
