@@ -54,7 +54,7 @@ ECHONET Lite Web APIの仕様書類はエコーネットコンソーシアムの
 正しく動作しない、エラーが発生する、仕様が分からない等、お問い合わせについてはIssueを発行してください。画面上の左の方にIssuesメニューがあると思います。ご質問には極力回答するようにします。機能追加については時間があればぼちぼち進めます。
 
 # フリー素材イラスト引用元
-IoT House Simulatorを構成する画像は以下のサイトから入手しました。
+IoT Home Simulatorを構成する画像は以下のサイトから入手しました。
 1. リビングの画像
     - https://www.irasutoya.com/2016/01/blog-post_133.html
     - Copyright(c) いらすとや. All Rights Reserved.
