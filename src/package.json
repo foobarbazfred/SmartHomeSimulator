@@ -1,6 +1,6 @@
 {
   "name": "SmartHomeSimulator",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "socket.io": "^4.7.2"
+    "socket.io": "^4.7.2",
+    "yargs": "^17.7.2"
   }
 }

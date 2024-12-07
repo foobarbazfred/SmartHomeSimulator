@@ -6,12 +6,13 @@
 // 1.0.0   first  version
 // 1.0.1   fix bug (miss find local ip)  2024/1/2
 // 1.0.2   change listen port 8085 -> 8010  2024/1/10
-// 1.0.3   2024/1/21 change connection status:  offline -> online 
-// 1.0.4   2024/1/21 modify get_properties (change to reply all properties)
-// 1.0.5   2024/1/25 modify get_property (change json format)
-// 1.0.6   2024/2/18 modify device id for common  e.g. 00000  or 012345
-// 1.0.7   2024/3/01 Changed device ID to general ID  (e.g. 012345)
-// 1.0.8   2024/6/05 Changed device ID to general ID  (e.g. 012345FF)
+// 1.0.3   2024/01/21 change connection status:  offline -> online 
+// 1.0.4   2024/01/21 modify get_properties (change to reply all properties)
+// 1.0.5   2024/01/25 modify get_property (change json format)
+// 1.0.6   2024/02/18 modify device id for common  e.g. 00000  or 012345
+// 1.0.7   2024/03/01 Changed device ID to general ID  (e.g. 012345)
+// 1.0.8   2024/06/05 Changed device ID to general ID  (e.g. 012345FF)
+// 1.0.9   2024/12/07 support option (--ip,  --port)
 //
 //------------------------------------------------------------------
 // https://socket.io/get-started/chat
@@ -24,6 +25,10 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');    // npm install socket.io
 const io = new Server(server);
 
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
+
+
 // setting for parse body of HTTP POST
 const bodyParser = require('body-parser')  // npm install body-parser
 app.use(bodyParser.urlencoded({extended: true}))
@@ -32,8 +37,32 @@ app.use(bodyParser.json())
 // set ejs to view engine
 const ejs = require('ejs');         // install ejs
 
-const PORT = 8010;                     // listen port  changed 8085 -> 8010 (v1.0.2)
-const LOCAL_IP = get_local_ip();       // get server side ip
+const DEFAULT_PORT = 8010;          // listen port  changed 8085 -> 8010 (v1.0.2)
+
+// Handle string option arguments
+const argv = yargs(hideBin(process.argv))
+  .option('port', {
+    type: 'string',
+    description: 'port number',
+  })
+  .option('ip', {
+   type: 'string',
+   description: 'ip address',
+ })
+ .help()
+ .argv;
+
+if ( argv.ip != undefined ){
+   listen_ip = argv.ip;
+}else{
+    listen_ip =  get_local_ip();       // get server side ip
+}
+if ( argv.port != undefined ){
+   listen_port = argv.port;
+}else{
+   listen_port = DEFAULT_PORT;
+}
+
 
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/js/img', express.static(__dirname + '/public/img'));
@@ -64,7 +93,7 @@ app.get('/', (req, res) => {
    const data = ejs.render(HOMEPAGE_TEMPLATE,
        {connection_status: client_connection,
         server_status: 'ok',
-        ip_address: `${LOCAL_IP}:${PORT}`
+        ip_address: `${listen_ip}:${listen_port}`
    });
    res.send(data);
 
@@ -333,11 +362,9 @@ io.on('connection', (socket) => {
    });
 });
 
-server.listen(PORT,() => {
-   console.log(`listen on ${LOCAL_IP}:${PORT}`);
+server.listen(listen_port, listen_ip, () => {
+   console.log(`listen on ${listen_ip}:${listen_port}`);
 });
-
-
 
 
 function get_local_ip(){
