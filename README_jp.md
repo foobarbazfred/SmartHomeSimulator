@@ -2,6 +2,8 @@
 
 SmartHomeSimulatorはIoT プログラミング研修のために作成されたソフトウエアです。IoT住宅をまねたIoT House Simulatorと、上記Simulatorを制御できるECHONET Lite Web APIで構成されます。IoT House Simulatorはブラウザ上で動作しECHONET Lite Web APIはNode.js上で動作します。ソフトウエアは全てJavaScriptで記述されています。SmartHomeSimulatorを動かすにはNode.jsが必要となります。
 
+<img src="https://github.com/foobarbazfred/SmartHomeSimulator/blob/main/images/screen_iamge.png?raw=true" width=300>
+
 # ソフトウエアのインストール方法
 
 Node.jsが動くLinux環境またはWindows環境において、ソースファイル一式を配置してください(srcフォルダ以下のファイル一式)。gitコマンドを使う場合は以下
